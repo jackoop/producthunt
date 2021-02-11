@@ -16,9 +16,9 @@ Including another URLconf
 from django.urls import path, include
 from . import views
 
-
 urlpatterns = [
-    path('signup', views.signup, name='signup'),
-    path('login', views.login, name='login'),
-    path('logout', views.logout, name='logout'),
+    path('create', views.create, name='create'),
+    path('<int:product_id>', views.detail, name='detail'),
+    path('<int:product_id>/upvote', views.upvote, name='upvote'),
+
 ]
